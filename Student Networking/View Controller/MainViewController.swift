@@ -12,11 +12,18 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    }
-    @IBAction func sort(_ sender: Any) {
+        
+        networkClient.fetchRecipies { (students, error) in
+            if let error = error {
+                NSLog("Error occured \(error)")
+                return
+            }
+            self.students = students ?? []
+        }
     }
     
+    @IBAction func sort(_ sender: Any) {
+    }
     @IBOutlet weak var sortSelector: UISegmentedControl!
     
     
@@ -30,5 +37,10 @@ class MainViewController: UIViewController {
     }
     
     private var studentTableViewController: StudentTableViewController!
-
+    private let networkClient = NetworkClient()
+    private var students: [Student] = [] {
+    didSet {
+            studentTableViewController.students = students
+        }
+    }
 }

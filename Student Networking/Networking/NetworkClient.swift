@@ -29,7 +29,7 @@ struct NetworkClient {
                 completion(nil, error)
                 return
             }
-        }
+        }.resume()
         
     }
     
