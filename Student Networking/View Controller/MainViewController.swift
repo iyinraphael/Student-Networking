@@ -23,7 +23,22 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func sort(_ sender: Any) {
+        updateSort()
     }
+    
+    private func updateSort() {
+        DispatchQueue.main.async {
+            let sortedStudents: [Student]
+            if self.sortSelector.selectedSegmentIndex == 0 {
+                sortedStudents = self.students.sorted { $0.firstName < $1.firstName}
+            } else {
+                sortedStudents = self.students.sorted { ($0.lastName ?? "") < ($1.lastName ?? "" ) }
+            }
+            self.studentTableViewController.students = sortedStudents
+        }
+        
+    }
+    
     @IBOutlet weak var sortSelector: UISegmentedControl!
     
     
@@ -40,7 +55,7 @@ class MainViewController: UIViewController {
     private let networkClient = NetworkClient()
     private var students: [Student] = [] {
     didSet {
-            studentTableViewController.students = students
+            updateSort()
         }
     }
 }
