@@ -8,24 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		EB032A1521B5A338002FA159 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB032A1421B5A338002FA159 /* AppDelegate.swift */; };
-		EB032A1721B5A338002FA159 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB032A1621B5A338002FA159 /* ViewController.swift */; };
 		EB032A1A21B5A338002FA159 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB032A1821B5A338002FA159 /* Main.storyboard */; };
 		EB032A1C21B5A33B002FA159 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB032A1B21B5A33B002FA159 /* Assets.xcassets */; };
 		EB032A1F21B5A33B002FA159 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB032A1D21B5A33B002FA159 /* LaunchScreen.storyboard */; };
 		EB032A2921B5A372002FA159 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB032A2821B5A372002FA159 /* Student.swift */; };
 		EB032A2B21B5A3A9002FA159 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB032A2A21B5A3A9002FA159 /* NetworkClient.swift */; };
+		EB032A2E21B5AE49002FA159 /* StudentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB032A2D21B5AE49002FA159 /* StudentTableViewController.swift */; };
+		EB032A3021B5AE5F002FA159 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB032A2F21B5AE5F002FA159 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EB032A1121B5A338002FA159 /* Student Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Student Networking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB032A1421B5A338002FA159 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EB032A1621B5A338002FA159 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EB032A1921B5A338002FA159 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB032A1B21B5A33B002FA159 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB032A1E21B5A33B002FA159 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB032A2021B5A33B002FA159 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB032A2821B5A372002FA159 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		EB032A2A21B5A3A9002FA159 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		EB032A2D21B5AE49002FA159 /* StudentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewController.swift; sourceTree = "<group>"; };
+		EB032A2F21B5AE5F002FA159 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +60,10 @@
 		EB032A1321B5A338002FA159 /* Student Networking */ = {
 			isa = PBXGroup;
 			children = (
+				EB032A2C21B5AE23002FA159 /* View Controller */,
 				EB032A2721B5A351002FA159 /* Networking */,
 				EB032A2621B5A348002FA159 /* Model */,
 				EB032A1421B5A338002FA159 /* AppDelegate.swift */,
-				EB032A1621B5A338002FA159 /* ViewController.swift */,
 				EB032A1821B5A338002FA159 /* Main.storyboard */,
 				EB032A1B21B5A33B002FA159 /* Assets.xcassets */,
 				EB032A1D21B5A33B002FA159 /* LaunchScreen.storyboard */,
@@ -84,6 +86,15 @@
 				EB032A2A21B5A3A9002FA159 /* NetworkClient.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		EB032A2C21B5AE23002FA159 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EB032A2D21B5AE49002FA159 /* StudentTableViewController.swift */,
+				EB032A2F21B5AE5F002FA159 /* MainViewController.swift */,
+			);
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,10 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB032A1721B5A338002FA159 /* ViewController.swift in Sources */,
 				EB032A2921B5A372002FA159 /* Student.swift in Sources */,
 				EB032A1521B5A338002FA159 /* AppDelegate.swift in Sources */,
+				EB032A2E21B5AE49002FA159 /* StudentTableViewController.swift in Sources */,
 				EB032A2B21B5A3A9002FA159 /* NetworkClient.swift in Sources */,
+				EB032A3021B5AE5F002FA159 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
